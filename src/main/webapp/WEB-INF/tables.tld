@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>clientTable</short-name>
+    <uri>/WEB-INF/tables</uri>
+    <description>My table tag library</description>
+
+    <!-- Table of all clients-->
+    <tag>
+        <name>clientsTable</name>
+        <tag-class>com.course.tag.ClientsTable</tag-class>
+        <body-content>empty</body-content>
+        <description>Custom tag displays a table of client information</description>
+        <attribute>
+            <name>clients</name>
+            <required>true</required>
+            <description> Provide clients data</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>csrf</name>
+            <required>false</required>
+            <description>Provide the csrf protection attribute</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <!-- Table of client-->
+    <tag>
+        <name>clientTable</name>
+        <tag-class>com.course.tag.ClientTable</tag-class>
+        <body-content>empty</body-content>
+        <description>Custom tag displays a table of client cards information</description>
+        <attribute>
+            <name>bills</name>
+            <required>true</required>
+            <description>Provides information about client</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>csrf</name>
+            <required>false</required>
+            <description>Provide the csrf protection attribute</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>
